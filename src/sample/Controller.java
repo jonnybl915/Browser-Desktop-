@@ -28,4 +28,12 @@ public class Controller {
             onGo(); //runs the onGo method when the Enter key is pressed
         }
     }
+    public void onBack() {
+        try {
+            view.getEngine().getHistory().go(-1);
+        } catch (Exception e){}
+    }
+    public void onForward() {
+        view.getEngine().getHistory().go(1);
+    }
 }
